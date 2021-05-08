@@ -13,7 +13,7 @@ function App() {
 
   const InputHandler = async (e) => {
     setMovieTitle(e.target.value);
-    const response = await axios(`http://www.omdbapi.com/?s=${e.target.value}&apikey=${process.env.REACT_APP_OMDB_API_KEY}&type=movie`);
+    const response = await axios(`https://www.omdbapi.com/?s=${e.target.value}&apikey=${process.env.REACT_APP_OMDB_API_KEY}&type=movie`);
     if(response.data.Response === "False"){
       setMovies("");
     } else {
